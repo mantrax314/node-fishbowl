@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "rootDir": "src",
+      "outDir": "build",
+      "removeComments": true,
+      "target": "es5",
+      "declaration": true
+    },
+    "files": ["./src/fishbowl.ts",
+              "./src/fishbowl.spec.ts"]
+}

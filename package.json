@@ -1,0 +1,30 @@
+{
+  "name": "node-fishbowl",
+  "version": "1.0.0",
+  "description": "An API wrapper for Fishbowl Inventory written in nodejs",
+  "main": "build/fishbowl.js",
+  "scripts": {
+    "test": "mocha build/fishbowl.spec.js",
+    "watch": "tsc --watch",
+    "dist": "tsc"
+  },
+  "author": "Kyle Baldwin <kwb@mail.sfsu.edu> (http://kylebaldw.in)",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "csv": "^0.4.6",
+    "grunt": "^0.4.5",
+    "grunt-ts": "^5.1.1",
+    "lodash": "^3.10.1",
+    "xml2json": "^0.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gpit2286/node-fishbowl"
+  }
+}
