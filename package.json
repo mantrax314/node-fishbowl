@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An API wrapper for Fishbowl Inventory written in nodejs",
   "main": "build/fishbowl.js",
+  "typings": "build/fishbowl.d.ts",
   "scripts": {
     "test": "mocha build/fishbowl.spec.js",
     "watch": "tsc --watch",

@@ -10,7 +10,7 @@ import bunyan = require('bunyan');
 import net = require('net');
 
 //Fishbowl Library
-import { Fishbowl } from './fishbowl';
+import Fishbowl from './fishbowl'
 
 function createFbInstance() {
   //This is just to create a new FB instance and override logger to /dev/null

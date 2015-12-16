@@ -16,8 +16,7 @@ var csv = require('csv');
 var errList = require('../lib/resCodes.json');
 
 
-
-export class Fishbowl {
+export default class Fishbowl {
   /**
   * Username to login to Fishbowl
   */
