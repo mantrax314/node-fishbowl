@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node4-lts/4.2.4/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   './' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.4
+4 verbose publish [ './' ]
+5 silly cache add args [ './', null ]
+6 verbose cache add spec ./
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: './',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: './',
+7 silly cache add   spec: '/Users/kylebaldwin/Documents/Business/node-fishbowl',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package.tgz',
+9 verbose tar pack   '/Users/kylebaldwin/Documents/Business/node-fishbowl' ]
+10 verbose tarball /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package.tgz
+11 verbose folder /Users/kylebaldwin/Documents/Business/node-fishbowl
+12 info prepublish node-fishbowl@1.0.2
+13 verbose addLocalTarball adding from inside cache /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package.tgz
+14 silly cache afterAdd node-fishbowl@1.0.2
+15 verbose afterAdd /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package/package.json not in flight; writing
+16 verbose afterAdd /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package/package.json written
+17 silly publish { name: 'node-fishbowl',
+17 silly publish   version: '1.0.2',
+17 silly publish   description: 'An API wrapper for Fishbowl Inventory written in nodejs',
+17 silly publish   main: 'build/fishbowl.js',
+17 silly publish   typings: 'build/fishbowl.d.ts',
+17 silly publish   scripts:
+17 silly publish    { test: 'mocha build/fishbowl.spec.js',
+17 silly publish      watch: 'tsc --watch',
+17 silly publish      dist: 'tsc' },
+17 silly publish   author:
+17 silly publish    { name: 'Kyle Baldwin',
+17 silly publish      email: 'kwb@mail.sfsu.edu',
+17 silly publish      url: 'http://kylebaldw.in' },
+17 silly publish   license: 'MIT',
+17 silly publish   dependencies:
+17 silly publish    { bunyan: '^1.5.1',
+17 silly publish      csv: '^0.4.6',
+17 silly publish      grunt: '^0.4.5',
+17 silly publish      'grunt-ts': '^5.1.1',
+17 silly publish      lodash: '^3.10.1',
+17 silly publish      xml2json: '^0.9.0' },
+17 silly publish   devDependencies: { chai: '^3.4.1', mocha: '^2.3.4', sinon: '^1.17.2' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/gpit2286/node-fishbowl.git' },
+17 silly publish   readme: '# node-fishbowl\n\n`node-fishbowl` was created as a communication tool between node and [Fishbowl Inventory](https://www.fishbowlinventory.com/).  Useage is as easy as:\n\n```bash\nnpm install node-fishbowl --save\n```\n\n## Install\n\n`node-fishbowl` can be used in two ways.  \n\nWithout Typescript:\n```js\n//Include\nvar Fishbowl = require(\'node-fishbowl\');\n\n//Create new instance\nvar fb = new Fishbowl.Fishbowl({\n    host: \'127.0.0.1\',\n    IADescription: \'A node wrapper for Fishbowl Inventory\',\n    IAID: 2286,\n    IAName: \'node-fishbowl\',\n    password: \'admin2\',\n    port: 28192,\n    username: \'admin\',\n    bunyanLevel: \'debug\'\n});\n```\n\nWith Typescript:\n```js\n//Include\nimport Fishbowl = require(\'node-fishbowl\');\n\n//Create new instance\nvar fb = new Fishbowl.Fishbowl({\n    host: \'127.0.0.1\',\n    IADescription: \'A node wrapper for Fishbowl Inventory\',\n    IAID: 2286,\n    IAName: \'node-fishbowl\',\n    password: \'admin2\',\n    port: 28192,\n    username: \'admin\',\n    bunyanLevel: \'debug\'\n});\n```\n\n## Config\n| Config Name | Description |\n|:------------|:------------|\n| host | The host that Fishbowl in installed on. |\n| IADescription | The description for the Integrated App.  This will be stored/used in Fishbowl |\n| IAID | The ID of this Integrated App. This will be stored/used in Fishbowl|\n| IAName | The Name of this Integrated App. This will be stored/used in Fishbowl|\n| password | The password of the user for the Integrated App. |\n| port | The port number that Fishbowl is installed on. |\n| username | The username of the user for the Integrated App. |\n| bunyanLevel | The logging level of the library. |\n\n## Usage\n\n```js\n//Example\nfb.sendRequest({\n    action: \'ApiCallName\',\n    params: {\n      XMLKey1: XMLValue1,\n      XMLKey2: XMLVale2\n    }\n});\n\n//Call that can be used to test\nfb.sendRequest({\n    action: \'ExecuteQueryRq\',\n    params: {\n      Query: \'select * from customer\'\n    }\n});\n```\n\n## Help!\nThis was a pain to get working.  There are a lot of quirks that I had to work through.  If you\'re having issues, open a ticket and I\'ll try to help as much as I can.  I also wrote a handful of hints in the Wiki but not in a clear format yet. Feel free to poke around there as well.   ',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'f8efa2a34a9e6f676c5cbdbc70befac33dd932cc',
+17 silly publish   bugs: { url: 'https://github.com/gpit2286/node-fishbowl/issues' },
+17 silly publish   homepage: 'https://github.com/gpit2286/node-fishbowl#readme',
+17 silly publish   _id: 'node-fishbowl@1.0.2',
+17 silly publish   _shasum: '1fb44393857d6595c7dc097cb325611d931abec5',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name node-fishbowl
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/node-fishbowl
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/kylebaldwin/.npm/node-fishbowl/1.0.2/package.tgz
+25 verbose request uri https://registry.npmjs.org/node-fishbowl
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 6:39:03 PM
+28 verbose request using bearer token for auth
+29 verbose request id 8d132d591a66ac7f
+30 http request PUT https://registry.npmjs.org/node-fishbowl
+31 http 403 https://registry.npmjs.org/node-fishbowl
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Mon, 04 Jan 2016 02:39:03 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-sjc3120-SJC',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1451875143.200784,VS0,VE153' }
+33 verbose request invalidating /Users/kylebaldwin/.npm/registry.npmjs.org/node-fishbowl on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 1.0.2." : node-fishbowl
+35 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid node-fishbowl
+38 verbose cwd /Users/kylebaldwin/Documents/Business/node-fishbowl
+39 error Darwin 15.2.0
+40 error argv "/usr/local/Cellar/node4-lts/4.2.4/bin/node" "/usr/local/bin/npm" "publish" "./"
+41 error node v4.2.4
+42 error npm  v2.14.12
+43 error code E403
+44 error "You cannot publish over the previously published version 1.0.2." : node-fishbowl
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
