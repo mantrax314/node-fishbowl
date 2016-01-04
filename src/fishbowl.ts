@@ -276,15 +276,20 @@ export default class Fishbowl {
     //should be changed as there should always be one row with the
     //column headers... TBD
     var csvString = '';
-
-    _.each(notCSV.Rows.Row, (cV)=> {
-      //There's a weird parsing error where a <Row /> gets changed to an
-      //empty Object.  This is my fix for that.
-      if (typeof cV === 'object') {
-        return;
-      }
-       csvString = csvString + cV + '\n';
-    });
+    if (Array.isArray(notCSV.Rows.Row) === false) {
+      //If it's not an array, then it's just the headers from a SQL response.
+      //I haven't found another way this happens.
+      csvString = notCSV.Rows.Row + '\n';
+    } else {
+      _.each(notCSV.Rows.Row, (cV)=> {
+        //There's a weird parsing error where a <Row /> gets changed to an
+        //empty Object.  This is my fix for that.
+        if (typeof cV === 'object') {
+          return;
+        }
+         csvString = csvString + cV + '\n';
+      });
+    }
 
     var retObject = csv.parse(csvString, { columns: true }, (err, pObj)=> {
       if (err) {
