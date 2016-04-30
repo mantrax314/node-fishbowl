@@ -462,7 +462,7 @@ export default class Fishbowl {
       }];
 
       saniMap.forEach((cV)=> {
-        xmlString = xmlString.replace(cV.search, cV.sanitized);
+        xmlString = xmlString.replace(new RegExp(cV.search, 'g'), cV.sanitized);
       });
     }
 
