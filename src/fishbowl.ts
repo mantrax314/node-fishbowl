@@ -447,7 +447,6 @@ export default class Fishbowl {
   @return {string} Returns sanitized XML string
   */
   xmlSanitize(xmlString: string): string {
-
     var saniReg = /[&<>]/; //The chars we are checking for
     if (saniReg.test(xmlString) === true) {
       var saniMap = [{

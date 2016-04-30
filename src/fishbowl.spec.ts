@@ -440,7 +440,7 @@ describe('Fishbowl Library', ()=> {
         fb.xmlSanitize('Test>String').should.equal('Test&gt;String');
       });
       it('should replace multiple instances of a string', ()=> {
-        fb.xmlSanitize('Test&Strin&').should.equal('Test&amp;Strin&amp;'); 
+        fb.xmlSanitize('Test&Strin&').should.equal('Test&amp;Strin&amp;');
       })
     });
 
